@@ -38,13 +38,13 @@ class CarrinhoDeCompras() {
     }
 
     fun produtoMaisCaro(): Produto? {
-        return _listaDeProdutos.maxByOrNull { produto ->
+        return _listaDeProdutos.maxBy { produto ->
             produto.valor
         }
     }
 
     fun produtoMaisBarato(): Produto? {
-        return _listaDeProdutos.minByOrNull {
+        return _listaDeProdutos.minBy {
             it.valor
         }
     }
